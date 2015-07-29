@@ -13,6 +13,7 @@
     "gulp": "^3.9.0",
     "gulp-browserify": "^0.5.1",
     "gulp-inject": "^1.5.0",
+    "gulp-jshint": "^1.11.2",
     "main-bower-files": "^2.9.0"
   }
 }

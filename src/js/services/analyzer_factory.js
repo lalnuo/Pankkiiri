@@ -21,7 +21,7 @@ angular.module('banker')
       var dayInMs = 1000 * 60 * 60 * 24;
       var days = (last.getTime() - first.getTime()) / dayInMs + 1;
       return totalConsumption / days;
-    }
+    };
 
     return {
       analyze: function(transactions) {
@@ -30,10 +30,10 @@ angular.module('banker')
         result.totalChange = totalChange;
         result.totalEarned = totalEarned;
         result.totalConsumption = totalConsumption;
-        
+
         result.averageConsumptionPerDay = averageConsumptionPerDay(transactions);
         console.log(result);
         return result;
       }
-    }
-  })
+    };
+  });

@@ -13,7 +13,7 @@ angular.module('banker')
           date: date,
           reciever: row[4],
           sum: parseFloat(row[3])
-        }
+        };
       });
     };
   });

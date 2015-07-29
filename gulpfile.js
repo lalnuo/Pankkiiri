@@ -1,6 +1,5 @@
-// REMEMBER TO RETURN SO DEPENDENCIES MIGHT EVEN WORK!
-
 var gulp = require('gulp');
+var jshint = require('gulp-jshint');
 var mainBowerFiles = require('main-bower-files');
 var inject = require('gulp-inject');
 var browserify = require('gulp-browserify');
@@ -11,6 +10,12 @@ gulp.task('scripts', function() {
       insertGlobals : true
     }))
     .pipe(gulp.dest('./build/js'))
+});
+
+gulp.task('lint', function() {
+    return gulp.src('./src/js/**/*.js')
+      .pipe(jshint({curly: false, strict: false}))
+      .pipe(jshint.reporter('default'));
 });
 
 gulp.task('inject-files', ['scripts'], function() {
