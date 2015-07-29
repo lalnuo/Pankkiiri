@@ -10,8 +10,12 @@
 </head>
 
 <body ng-controller="BankerCtrl">
-  {{es}}
-  <input type="file" on-read-file="readFile($fileContent)" />
+  <input type="file" on-read-file="readFile($fileContent)" /><br/>
+  Total change: {{analysis.totalChange}}<br/>
+  Total earned: {{analysis.totalEarned}} <br/>
+  Total consumption: {{analysis.totalConsumption}} </br>
+  
+  Average consumption per day {{analysis.averageConsumptionPerDay}} <br/>
 </body>
 
 </html>
